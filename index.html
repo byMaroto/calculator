@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td class="input-cell" colspan="4">
+                    <input type="text" id="input" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td><button onclick="appendValue(7)">7</button></td>
+                <td><button onclick="appendValue(8)">8</button></td>
+                <td><button onclick="appendValue(9)">9</button></td>
+                <td><button onclick="appendOperator('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="appendValue(4)">4</button></td>
+                <td><button onclick="appendValue(5)">5</button></td>
+                <td><button onclick="appendValue(6)">6</button></td>
+                <td><button onclick="appendOperator('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="appendValue(1)">1</button></td>
+                <td><button onclick="appendValue(2)">2</button></td>
+                <td><button onclick="appendValue(3)">3</button></td>
+                <td><button onclick="appendOperator('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="appendValue(0)">0</button></td>
+                <td><button onclick="appendOperator('.')">.</button></td>
+                <td><button onclick="clearInput()">C</button></td>
+                <td><button onclick="appendOperator('/')">/</button></td>
+            </tr>
+            <tr>
+                <td colspan="4"><button onclick="calculate()">=</button></td>
+            </tr>
+        </table>
+        <script>
+            let input = document.getElementById('input');
+
+            function appendValue(value) {
+                input.value += value;
+            }
+
+            function appendOperator(operator) {
+                input.value += operator;
+            }
+
+            // The C button clears the input field.
+            function clearInput() {
+                input.value = '';
+            }
+
+            // To calculate the value we will use the eval() function. Which is used to solve mathematical operations.
+            function calculate() {
+                input.value = eval(input.value);
+            }
+        </script>
+    </body>
+</html>
