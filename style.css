@@ -19,3 +19,8 @@ td {
     background-color: #e6e6e6;
     font-weight: bold;
 }
+
+button {
+    border: none;
+    background-color: #fff;
+}
