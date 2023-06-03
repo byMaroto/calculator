@@ -1,4 +1,4 @@
-/* Estilo para la calculadora */
+/* Calculator style */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -15,6 +15,7 @@ table {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    border: solid 1px gray;
 }
 
 td {
@@ -22,12 +23,13 @@ td {
     text-align: center;
 }
 
-.input-cell {
+/* Style of the calculator "screen" */
+.pantalla {
     background-color: #f7f7f7;
 }
 
 input[type="text"] {
-    width: 100%;
+    width: 90%;
     height: 40px;
     border: none;
     font-size: 18px;
@@ -35,6 +37,7 @@ input[type="text"] {
     padding-right: 10px;
 }
 
+/* Buttons style */
 button {
     width: 100%;
     height: 60px;
