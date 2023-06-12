@@ -7,6 +7,7 @@
     <body>
         <table>
             <tr>
+                <!-- Calculator screen -->
                 <td class="pantalla" colspan="4">
                     <input type="text" id="input" readonly>
                 </td>
@@ -36,16 +37,19 @@
                 <td><button onclick="appendOperator('/')">/</button></td>
             </tr>
             <tr>
+                <!-- When click "=" we call the "calculate" function to solve the mathematical operation -->
                 <td colspan="4"><button onclick="calculate()">=</button></td>
             </tr>
         </table>
         <script>
             let input = document.getElementById('input');
 
+            // A function that adds the value to the "screen" input.
             function appendValue(value) {
                 input.value += value;
             }
 
+            // To add the operator to the "screen" input.
             function appendOperator(operator) {
                 input.value += operator;
             }
